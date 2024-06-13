@@ -56,18 +56,29 @@ body {
   transform: scale(1.05);
 }
 
-/* Media query for responsive design */
-@media (min-width: 640px) {
-  .gallery {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
-  }
+/* Gallery.css */
+.model {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .gallery {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens and up */
-  }
+.model.open {
+  display: flex;
 }
+
+.pics {
+  overflow: hidden;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
+}
+
+.pics img {
+  transition: transform 0.3s ease;
+}
+
+.pics:hover img {
+  transform: scale(1.05);
+}
+
 
 
 /* Founder.module.css */
