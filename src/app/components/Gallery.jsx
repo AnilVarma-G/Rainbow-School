@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { RiCloseCircleLine } from "react-icons/ri";
+import './Gallery.css'; // Import the CSS file
 
 const Gallery = () => {
     const data = [
