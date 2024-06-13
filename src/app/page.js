@@ -5,19 +5,43 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
+import Slider from "./components/Slider";
+import Gallery from '../app/components/Gallery';
+import Welcome from '../app/components/Welcome'
+import Founder from '../app/components/Founder';
+import Facilities from '../app/components/Facilities'
+import ActivitiesComponent from '../app/components/Activities'
+import FixedIcons from '../app/components/Fixedicons'
+import VideoList from './components/VideoList'
+import FeedbackList from '../app/components/feeback'
+import ImageSlider from '../app/components/Webelief'
+
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
-        <HeroSection />
+      <div className="container mt-24 mx-auto px-12 py-20">
+        {/* <HeroSection /> */}
+        <Slider/>
+        <Welcome/>
+        <ImageSlider/>
         <AchievementsSection />
         <AboutSection />
-        <ProjectsSection />
+    
+        <Founder/>
+        <Gallery/>
+        <Facilities/>
+        <ActivitiesComponent/>
+        {/* <ProjectsSection /> */}
         <EmailSection />
+        <FixedIcons/>
+        {/* <VideoList/> */}
+        <FeedbackList/>
+
       </div>
       <Footer />
+
     </main>
   );
 }

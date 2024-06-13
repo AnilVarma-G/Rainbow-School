@@ -5,19 +5,39 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 
+
 const navLinks = [
+  {
+    title: "Home",
+    path: "#Home",
+  },
   {
     title: "About",
     path: "#about",
   },
   {
-    title: "Projects",
-    path: "#projects",
+    title: "Gallery",
+    path: "#Gallery",
+  },
+  {
+    title: "Facilities",
+    path: "#Facilities",
+  },
+  
+ 
+  {
+    title: "Activities",
+    path: "#Activities",
   },
   {
     title: "Contact",
     path: "#contact",
   },
+  {
+    title: "Webelief",
+    path: "#Webelief",
+  },
+
 ];
 
 const Navbar = () => {
@@ -30,7 +50,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          <img src="/rainbowlogo.jpg" alt="" width={100} height={100} />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
