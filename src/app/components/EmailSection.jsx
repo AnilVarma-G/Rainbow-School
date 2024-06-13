@@ -70,7 +70,7 @@ const EmailSection = () => {
           <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
             <div className="bg-white p-6 rounded-md shadow-md">
               <p className="text-xl font-semibold text-gray-800">
-                THank you for Contact us...
+                Thank you for contacting us...
               </p>
             </div>
           </div>
