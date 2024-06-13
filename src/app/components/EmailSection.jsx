@@ -27,6 +27,7 @@ const EmailSection = () => {
 
   return (
     <>
+          <h1 className="text-3xl font-bold mb-4 text-yellow-300"> Contact us </h1>
     <section
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
