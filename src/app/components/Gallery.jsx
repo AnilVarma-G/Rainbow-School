@@ -6,69 +6,22 @@ const Gallery = () => {
     const data = [
         { id: 1, imgSrc: '/image1.jpg' },
         { id: 2, imgSrc: '/gates.jpg' },
-        {
-            id: 3,
-            imgSrc: '/image13.jpg'
-        },
-        {
-            id: 4,
-            imgSrc: '/image12.jpg'
-        },
-        {
-            id: 5,
-            imgSrc: '/image9.jpg'
-        },
-        {
-            id: 6,
-            imgSrc: '/image4.jpg'
-        },
-        {
-            id: 7,
-            imgSrc: '/kids.jpg'
-        },
-        {
-            id: 8,
-            imgSrc: '/image5.jpg'
-        },
-        {
-            id: 9,
-            imgSrc: '/image3.jpg'
-        },
-        {
-            id: 10,
-            imgSrc: '/classroom.jpg'
-        }, {
-            id: 11,
-            imgSrc: '/image6.jpg'
-        },
-        {
-            id: 12,
-            imgSrc: '/image7.jpg'
-        },
-        {
-            id: 13,
-            imgSrc: '/transpaort.jpg'
-        },
-        {
-            id: 14,
-            imgSrc: '/image8.jpg'
-        },
-        {
-            id: 15,
-            imgSrc: '/image9.jpg'
-        },
-        {
-            id: 16,
-            imgSrc: '/image10.jpg'
-        },
-        {
-            id: 17,
-            imgSrc: '/image1.jpg'
-        },
-        {
-            id: 17,
-            imgSrc: '/games.jpg'
-        },
+        { id: 3, imgSrc: '/image13.jpg' },
+        { id: 4, imgSrc: '/image12.jpg' },
+        { id: 5, imgSrc: '/image9.jpg' },
+        { id: 6, imgSrc: '/image4.jpg' },
+        { id: 7, imgSrc: '/kids.jpg' },
+        { id: 8, imgSrc: '/image5.jpg' },
+        { id: 9, imgSrc: '/image3.jpg' },
+        { id: 10, imgSrc: '/classroom.jpg' },
+        { id: 11, imgSrc: '/image6.jpg' },
+        { id: 12, imgSrc: '/image7.jpg' },
+        { id: 13, imgSrc: '/transpaort.jpg' },
+        { id: 14, imgSrc: '/image8.jpg' },
+        { id: 15, imgSrc: '/image9.jpg' },
+        { id: 16, imgSrc: '/image10.jpg' },
+        { id: 17, imgSrc: '/image1.jpg' },
+        { id: 18, imgSrc: '/games.jpg' },
         // Add more images as needed
     ];
     const [model, setModel] = useState(false);
@@ -85,7 +38,7 @@ const Gallery = () => {
 
     return (
         <>
-        <h1 className="text-3xl font-bold mb-8 mt-14 text-yellow-300" id="Gallery">Our Gallery</h1>
+            <h1 className="text-3xl font-bold mb-8 mt-14 text-yellow-300" id="Gallery">Our Gallery</h1>
             {model && (
                 <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-50" onClick={closeModal}></div>
             )}
@@ -95,9 +48,9 @@ const Gallery = () => {
                 <RiCloseCircleLine onClick={closeModal} className="absolute top-4 right-4 w-10 h-10 text-white cursor-pointer" />
             </div>
 
-            <div className="gallery" >
+            <div className="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {data.map((item) => (
-                    <div className="pics" key={item.id} onClick={() => openModal(item.imgSrc)}>
+                    <div className="pics cursor-pointer" key={item.id} onClick={() => openModal(item.imgSrc)}>
                         <img className="w-full h-full object-cover" src={item.imgSrc} alt="" />
                     </div>
                 ))}
