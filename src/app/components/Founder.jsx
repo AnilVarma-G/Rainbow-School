@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Founder = () => {
     const images = [
-        { src: '/chairperson.jpg', name: 'Dr. S Sameer Al-Hussaini, Academic Director' },
-        { src: '/chairperson2.jpg', name: 'Dr. MD Misbah Uddin, Managing Director' },
-        { src: '/chairperson3.jpg', name: 'D. Sudha Rani, Chairperson' }
+        { src: '/chairperson.jpg', name: 'Dr. Sudha Rani, Chairperson' },
+        { src: '/chairperson2.jpg', name: 'Dr. S Sameer Al-Hussaini, Academic Director' },
+        { src: '/chairperson3.jpg', name: 'Dr. MD Misbah Uddin, Managing Director'' }
     ];
 
     return (
