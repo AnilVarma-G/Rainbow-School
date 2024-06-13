@@ -15,7 +15,8 @@ const Founder = () => {
                 "Education is the key to unlocking the golden door of freedom." - George Washington Carver
             </blockquote>
             <p className="mb-8 text-justify">
-                Rainbow Concept School & Play School was founded by visionary leaders committed to providing a nurturing environment where every child can flourish. Dr. S Sameer Al-Hussaini, the Academic Director, brings a wealth of educational expertise, ensuring our curriculum is innovative and student-focused. Dr. MD Misbah Uddin, the Managing Director, oversees operations with a passion for excellence, ensuring that our school maintains the highest standards of care and education. D. Sudha Rani, our esteemed Chairperson, guides the institution with dedication and a deep understanding of community values, ensuring that Rainbow Concept School & Play School remains a beacon of quality education and holistic development.
+                Rainbow Concept School &
+                 Play School was founded by visionary leaders committed to providing a nurturing environment where every child can flourish. Dr. S Sameer Al-Hussaini, the Academic Director, brings a wealth of educational expertise, ensuring our curriculum is innovative and student-focused. Dr. MD Misbah Uddin, the Managing Director, oversees operations with a passion for excellence, ensuring that our school maintains the highest standards of care and education. D. Sudha Rani, our esteemed Chairperson, guides the institution with dedication and a deep understanding of community values, ensuring that Rainbow Concept School & Play School remains a beacon of quality education and holistic development.
             </p>
             <div className="flex flex-wrap justify-center md:justify-around">
                 {images.map((image, index) => (
