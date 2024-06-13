@@ -26,7 +26,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.gallery{
+/* .gallery{
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
@@ -34,7 +34,7 @@ body {
   -moz-column-width: 33%;
   column-width: 33%;
   padding: 0 12px;
-}
+} */
 
 .gallery .pics {
   width: 100%; /* Adjust width for desired thumbnail size */
@@ -49,9 +49,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-
-
 
 
 
