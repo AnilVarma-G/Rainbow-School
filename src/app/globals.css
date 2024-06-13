@@ -56,6 +56,19 @@ body {
   transform: scale(1.05);
 }
 
+/* Media query for responsive design */
+@media (min-width: 640px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens and up */
+  }
+}
+
 
 /* Founder.module.css */
 .container {
