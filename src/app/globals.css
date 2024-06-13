@@ -26,60 +26,94 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+}
 
-/* Gallery.css */
-.model {
-  display: none;
+.gallery .pics {
+  width: 100%; /* Adjust width for desired thumbnail size */
+  height: 200px; /* Set a fixed height for consistency */
+  cursor: pointer;
+  margin-bottom: 12px;
+  overflow: hidden; /* Ensure images do not overflow */
+}
+
+.gallery .pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.model img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Adjust as needed */
+}
+
+
+@media(max-width:991px){
+  .gallery{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+ 
+  }
+}
+
+
+
+@media(max-width:480px){
+  .gallery{
+    -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+ 
+  }
+}
+
+.model{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 999;
+  transition: opacity .4s ease  visibility .4s ease transform .4s ease-in-out;
 }
 
 .model.open {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px; /* Adjust the gap as needed */
+.model img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px ;
+  margin: 0 auto ;
 }
-
-.pics {
-  overflow: hidden;
-  border-radius: 8px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
-}
-
-.pics img {
-  transition: transform 0.3s ease;
-}
-
-.pics:hover img {
-  transform: scale(1.05);
-}
-
-/* Gallery.css */
-.model {
-  display: none;
-}
-
-.model.open {
-  display: flex;
-}
-
-.pics {
-  overflow: hidden;
-  border-radius: 8px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
-}
-
-.pics img {
-  transition: transform 0.3s ease;
-}
-
-.pics:hover img {
-  transform: scale(1.05);
-}
-
-
 
 /* Founder.module.css */
 .container {
