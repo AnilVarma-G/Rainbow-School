@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { images } from "./constants";
 import left from "../../../public/left.svg";
@@ -9,83 +11,103 @@ import Image from "next/image";
 const rainbowColors = [
   "#FF0000", // Red
   "#FF7F00", // Orange
-  "#008070", // Yellow
-  "#00FF00", // Green
+  "#66FF00", // Yellow
+  "#66FF00", // Green
   "#0000FF", // Blue
-  "#4B0082", // Indigo
-  "#8B00FF"  // Violet
+  "#EE82EE", // Indigo
+  "#EE82EE", // Violet
 ];
 
 // Function to split title into colored words
 const getColoredTitle = (title) => {
-  const words = title.split(' ');
+  const words = title.split(" ");
   return words.map((word, index) => (
-    <span key={index} style={{ color: rainbowColors[index % rainbowColors.length] }}>
-      {word}{' '}
+    <span
+      key={index}
+      style={{ color: rainbowColors[index % rainbowColors.length] }}
+    >
+      {word}{" "}
     </span>
   ));
 };
 
 const Description = ({ activeImage, clickNext, clickPrev }) => {
   return (
-    <div className="grid place-items-start w-full bg-[#e7dfd9] relative md:rounded-tr-3xl md:rounded-br-3xl">
-      <div className="uppercase text-sm absolute right-4 top-2 underline-offset-4 underline">
-        High School
+    <div className="relative w-full">
+      {/* Logo in the top-left corner */}
+      <div className=" absolute top-0 left-0 z-50   p-4 logo">
+        <Image
+          src="/rainbowlogo.jpg"
+          alt="Logo"
+          width={100}
+          height={100}
+          style={{ borderRadius: "50%" }}
+        />
       </div>
+
       {images.map((elem, idx) => (
         <div
           key={idx}
           className={`${
             idx === activeImage
-              ? "block w-full h-full md:h-[80vh] py-20 md:px-20 px-10 text-left"
+              ? "block relative w-full h-[80vh] overflow-hidden"
               : "hidden"
           }`}
         >
-          <motion.div
-            initial={{
-              opacity: idx === activeImage ? 0 : 0.5,
-              scale: idx === activeImage ? 0.5 : 0.3,
-            }}
-            animate={{
-              opacity: idx === activeImage ? 1 : 0.5,
-              scale: idx === activeImage ? 1 : 0.3,
-            }}
-            transition={{
-              ease: "linear",
-              duration: 2,
-              x: { duration: 1 },
-            }}
-            className="w-full"
-          >
-            <div className="py-16 text-5xl font-extrabold">
-              {getColoredTitle(elem.title)}
-            </div>
-            <div className="leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-gray-600">
-             <h2 className="font-bold  text-black"> {elem.head}</h2> 
-              {elem.desc}
-            </div>
-          </motion.div>
-
-          <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10" id="contact">
-            Contact us 
-          </button>
-          <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
-            <div
-              className="absolute bottom-2 right-10 cursor-pointer"
-              onClick={clickPrev}
+          <Image
+            src={elem.src}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            className="absolute top-0 left-0 w-full h-full"
+          />
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white px-6">
+            <motion.div
+              initial={{
+                opacity: idx === activeImage ? 0 : 0.5,
+                scale: idx === activeImage ? 0.5 : 0.3,
+              }}
+              animate={{
+                opacity: idx === activeImage ? 1 : 0.5,
+                scale: idx === activeImage ? 1 : 0.3,
+              }}
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+              }}
+              className="w-full"
             >
-              <Image src={left} alt="" />
-            </div>
-
-            <div
-              className="absolute bottom-2 right-2 cursor-pointer"
-              onClick={clickNext}
+              <div className="py-16 mt-16 text-5xl font-extrabold">
+                {getColoredTitle(elem.title)}
+              </div>
+              <div className="leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-white">
+                <h2 className="text-white font-extrabold">{elem.head}</h2>
+                {elem.desc}
+              </div>
+            </motion.div>
+            <button
+              className="text-white bg-pink-400 uppercase px-4 py-2 rounded-md my-10"
+              id="Contact"
             >
-              <Image src={right} alt="" />
-            </div>
+              Contact us
+            </button>
           </div>
         </div>
       ))}
+
+      {/* Navigation buttons in top corners */}
+      <div className="absolute top-[250px] left-0 flex justify-center items-center mt-4 ml-4 z-50">
+        <div className="cursor-pointer" onClick={clickPrev}>
+          <Image src={left} alt="" />
+        </div>
+      </div>
+
+      <div className="absolute top-[250px] right-0 flex justify-center items-center mt-4 mr-4 z-50">
+        <div className="cursor-pointer" onClick={clickNext}>
+          <Image src={right} alt="" />
+        </div>
+      </div>
     </div>
   );
 };

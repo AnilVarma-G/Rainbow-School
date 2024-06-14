@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: red;
+  --background-start-rgb: red;
+  --background-end-rgb: red;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: red;
+    --background-start-rgb: red;
+    --background-end-rgb: red;
   }
 }
 
@@ -173,6 +173,103 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+
+
+
+
+/* CSS */
+@keyframes rainbow {
+  0% {
+    color: #ff0000; /* red */
+  }
+  14% {
+    color: #ff7f00; /* orange */
+  }
+  28% {
+    color: #ffff00; /* yellow */
+  }
+  42% {
+    color: #00ff00; /* green */
+  }
+  57% {
+    color: #0000ff; /* blue */
+  }
+  71% {
+    color: #4b0082; /* indigo */
+  }
+  85% {
+    color: #9400d3; /* violet */
+  }
+  100% {
+    color: #ff0000; /* red */
+  }
+}
+
+
+
+.rainbow-text {
+  background-image: linear-gradient(to right, red, rgb(53, 35, 3), rgb(99, 99, 11), green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: moveText 5s infinite linear;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(70px);
+  }
+}
+
+
+.facilities{
+  border-radius: 20px;
+}
+
+
+ /* added header css in activities */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 5s infinite;
+}
+
+
+/* MenuOverlay.css */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #d19cf7; /* bg-sky-100 */
+}
+
+.menu-overlay li {
+  opacity: 0; /* Start hidden */
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.logo{
+  border-radius: 20px;
 }
 
 

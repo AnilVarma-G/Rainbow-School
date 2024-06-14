@@ -25,10 +25,10 @@ const ImageSlider = () => {
 
   return (
     <>
-    <h1 className="text-3xl font-bold mb-8 mt-14 text-yellow-300">We Belief</h1>
-    <p className='text-white text-xl p-5'>At Rainbow Concept School, we believe in nurturing young minds through a unique blend of progressive education and holistic development. From our vibrant play school environment to our enriching high school programs, every stage of a child’s educational journey is crafted to inspire curiosity, foster creativity, and build a strong foundation for lifelong learning.</p>
-    <div className="relative w-full h-[800px] overflow-hidden" id='Webelief' >
-         <h1 className="text-3xl font-bold mb-8 mt-14 text-yellow-300">We Belief</h1>
+    <h1 className="text-3xl font-bold mb-8 mt-14 text-blue-900 blink">We Believe</h1>
+    <p className='text-black text-xl p-5 text-justify'>At Rainbow Concept School, we believe in providing quality education with experiential learning. From our vibrant play school environment to our enriching high school programs, every stage of a child’s educational journey is crafted to inspire curiosity, foster creativity, and build a strong foundation for lifelong learning.</p>
+    <div className="relative w-full h-[300px] overflow-hidden" id='Webelieve' >
+         {/* <h1 className="text-3xl font-bold mb-8 mt-14 text-yellow-300">We Belief</h1> */}
       {images.map((image, index) => (
         <div
           key={index}

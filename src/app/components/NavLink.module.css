@@ -1,0 +1,53 @@
+.rainbowText {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .rainbowText::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400%;
+    transition: all 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  .rainbowText:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+
+
+  /* NavLink.module.css */
+.nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: #e53e3e; /* Red color on hover */
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* Additional styles for rainbowText */
+  .rainbow-text {
+    /* Define your rainbow text styles here */
+    /* Example: */
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  

@@ -11,8 +11,8 @@ const Footer = () => {
     className="object-cover w-full h-full"
   />
 </span> */}
-<span>Designed by @RISTOGLOBALTECH</span>
-        <p className="text-slate-600">All rights reserved.</p>
+<span className="text-black font-extrabold">Designed by @RISTOGLOBALTECH</span>
+        <p className="text-black font-extrabold">All rights reserved.</p>
       </div>
     </footer>
   );

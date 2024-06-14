@@ -17,15 +17,16 @@ import FeedbackList from '../app/components/feeback'
 import ImageSlider from '../app/components/Webelief'
 
 
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col  bg-pink-50">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-20">
+      <div className="container mt-24 mx-auto  ">
         {/* <HeroSection /> */}
         <Slider/>
         <Welcome/>
-        <ImageSlider/>
+        <ImageSlider />
         <AchievementsSection />
         <AboutSection />
     
@@ -34,11 +35,11 @@ export default function Home() {
         <Facilities/>
         <ActivitiesComponent/>
         {/* <ProjectsSection /> */}
-        <EmailSection />
+        
         <FixedIcons/>
         {/* <VideoList/> */}
         <FeedbackList/>
-
+        <EmailSection />
       </div>
       <Footer />
 

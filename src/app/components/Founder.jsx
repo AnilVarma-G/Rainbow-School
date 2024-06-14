@@ -1,41 +1,69 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const Founder = () => {
-    const images = [
-        { src: '/chairperson.jpg', name: 'Dr. Sudha Rani, Chairperson' },
-        { src: '/chairperson2.jpg', name: 'Dr. S Sameer Al-Hussaini, Academic Director' },
-        { src: '/chairperson3.jpg', name: 'Dr. MD Misbah Uddin, Managing Director' }
-    ];
+  const images = [
+    {
+      src: "/chairperson.jpg",
+      name: "Dr. Sudha Rani, Chairperson",
+      color: "bg-blue-200",
+    },
+    {
+      src: "/chairperson2.jpg",
+      name: "Dr. S Sameer Al-Hussaini, Academic Director",
+      color: "bg-green-200",
+    },
+    {
+      src: "/chairperson3.jpg",
+      name: "Dr. MD Misbah Uddin, Managing Director",
+      color: "bg-purple-200",
+    },
+  ];
 
-    return (
-        <div className="text-center text-white">
-            <h1 className="text-3xl mb-4 text-yellow-400">Founded Members</h1>
-            <blockquote className="italic text-lg mb-4">
-                "Education is the key to unlocking the golden door of freedom." - George Washington Carver
-            </blockquote>
-            <p className="mb-8 text-justify">
-                Rainbow Concept School &
-                 Play School was founded by visionary leaders committed to providing a nurturing environment where every child can flourish. Dr. S Sameer Al-Hussaini, the Academic Director, brings a wealth of educational expertise, ensuring our curriculum is innovative and student-focused. Dr. MD Misbah Uddin, the Managing Director, oversees operations with a passion for excellence, ensuring that our school maintains the highest standards of care and education. D. Sudha Rani, our esteemed Chairperson, guides the institution with dedication and a deep understanding of community values, ensuring that Rainbow Concept School & Play School remains a beacon of quality education and holistic development.
-            </p>
-            <div className="flex flex-wrap justify-center md:justify-around">
-                {images.map((image, index) => (
-                    <div key={index} className="m-2 w-full sm:w-1/2 lg:w-1/3">
-                        <div className="relative w-full" style={{ paddingBottom: '100%' }}>
-                            <Image
-                                src={image.src}
-                                alt={image.name}
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-md"
-                            />
-                        </div>
-                        <p className="text-white mt-2">{image.name}</p>
-                    </div>
-                ))}
+  return (
+    <div className="text-center text-black">
+      <h1 className="text-3xl mb-4 text-blue-900">Founding Members</h1>
+      <blockquote className="italic text-lg mb-4">
+        "Education is not about the learning of facts but the training of minds
+        to think"
+      </blockquote>
+      <p className="mb-8 text-justify">
+        Rainbow Concept School & Play School, founded by visionary leaders, is
+        guided by Dr. Sudha Rani, Chairperson, whose dedication and deep
+        community values ensure the institution's commitment to quality
+        education and holistic development. Dr. S Sameer Al-Hussaini, Academic
+        Director, leverages his extensive educational expertise to innovate and
+        create a nurturing learning environment centered on student needs. Dr.
+        MD Misbah Uddin, Managing Director, upholds the school's highest
+        standards with a relentless pursuit of excellence in operations and
+        educational quality. Together, under their leadership, Rainbow Concept
+        School & Play School continues to flourish as a beacon of educational
+        excellence.
+      </p>
+      <div className="flex flex-wrap justify-center items-start">
+        {images.map((image, index) => (
+          <div key={index} className="m-2 w-80 relative">
+            <div
+              className={`relative h-80 rounded-md overflow-hidden ${image.color} shadow-lg transition-transform duration-300 transform hover:scale-105`}
+            >
+              <Image
+                src={image.src}
+                alt={image.name}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center top"
+                className="rounded-md"
+              />
+              <div className="absolute inset-0 bg-yellow-100 opacity-0 transition-opacity duration-300"></div>
             </div>
-        </div>
-    );
+            <p className="text-black mt-2 font-semibold text-center relative z-10 hover:text-xl hover:text-blue-900">
+              <span className="relative">{image.name}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Founder;
