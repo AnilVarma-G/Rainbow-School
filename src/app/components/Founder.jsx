@@ -22,7 +22,7 @@ const Founder = () => {
 
   return (
     <div className="text-center text-black">
-      <h1 className="text-3xl mb-4 text-blue-900">Founding Members</h1>
+      <h1 className="text-3xl mb-4 text-blue-900 blink">Founding Members</h1>
       <blockquote className="italic text-lg mb-4">
         "Education is not about the learning of facts but the training of minds
         to think"
