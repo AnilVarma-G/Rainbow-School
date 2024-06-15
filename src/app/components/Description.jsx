@@ -35,13 +35,13 @@ const Description = ({ activeImage, clickNext, clickPrev }) => {
   return (
     <div className="relative w-full">
       {/* Logo in the top-left corner */}
-      <div className=" absolute top-0 -mt-10 left-0 z-50   p-4 logo">
+      <div className=" absolute top-0 -left-4 z-50   p-4 logo">
         <Image
           src="/rainbowlogo.jpg"
           alt="Logo"
-          width={100}
-          height={100}
-          style={{ borderRadius: "50%" }}
+          width={50}
+          height={50}
+          style={{ borderRadius: "100%" }}
         />
       </div>
 
