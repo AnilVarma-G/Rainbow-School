@@ -1,7 +1,6 @@
 
-// components/EmailSection.js
-'use client'
 
+'use client'
 import React, { useState } from "react";
 import { AiFillPhone, AiFillInstagram } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -25,102 +24,104 @@ const EmailSection = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold  text-blue-900 mt-14 " >Contact Us</h1>
-      <section  className="grid md:grid-cols-2 my-4 md:my-12 py-24 gap-4 relative " id="Contactus">
-  <div   className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-   
-  <div className=" md:mt-5 bg-pink-200 p-5 mb-10 text-start rounded-lg">
-    <div className="max-w-md">
-      {/* <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5> */}
-      <p className="text-blue-900">
-        Rainbow Concept School <br />
-        Nursery to 10th Class <br /><br />
-        <strong className="font-extrabold text-red-900">Address:</strong> <br />
-        H. No 5-81, SP Nagar <br />
-        Bharat Nagar <br />
-        Moosapet <br />
-        Hyderabad <br />
-        Telangana 500018
-      </p>
+      <h1 className="  text-3xl font-bold text-blue-900 mt-14">Contact Us</h1>
+      <section className="grid md:grid-cols-2 my-4 md:my-12  gap-4 relative" id="Contactus">
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
 
-      {/* Contact details */}
-      <div className="flex flex-col text-start md:flex-col items-start md:items-center mt-4">
-        <a href="tel:+919398764573" className="flex items-center text-blue-900 p-2 rounded-full">
-          <AiFillPhone size={24} />
-          <span className="ml-2">+919398764573</span>
-        </a>
-        <a href="tel:+919398764573" className="flex items-center text-blue-900 p-2 rounded-full">
-          <AiFillPhone size={24} />
-          <span className="ml-2">+919908442253</span>
-        </a>
+        <div className="md:mt-5 bg-pink-100 p-5 mb-10 left-0 text-start rounded-lg">
+          <div className="max-w-md">
+            <p className="text-blue-900">
+              Rainbow Concept School <br />
+              Nursery to 10th Class <br /><br />
+              <strong className="font-extrabold text-red-900">Address:</strong> <br />
+              H. No 5-81, SP Nagar <br />
+              Bharat Nagar <br />
+              Moosapet <br />
+              Hyderabad <br />
+              Telangana 500018
+            </p>
 
-        <a href="mailto:rainbowschool0236@gmail.com" className="flex items-center p-2 text-blue-900 rounded-full md:ml-4 mt-2 md:mt-0">
-          <AiOutlineMail size={24} />
-          <span className="ml-2">Rainbowschool0236@gmail.com</span>
-        </a>
-      </div>
-    </div>
-  </div>
+            {/* Contact details */}
+            <div className="flex flex-col text-start md:flex-col items-start md:items-center mt-4">
+              <a href="tel:+919398764573" className="flex items-center text-blue-900 p-2 rounded-full">
+                <AiFillPhone size={24} />
+                <span className="ml-2">+919398764573</span>
+              </a>
+              <a href="tel:+914045064799" className="flex items-center text-blue-900 p-2 rounded-full">
+                <AiFillPhone size={24} />
+                <span className="ml-2">+914045064799</span>
+              </a>
+              
+              <a href="tel:+919908442253" className="flex items-center text-blue-900 p-2 rounded-full">
+                <AiFillPhone size={24} />
+                <span className="ml-2">+919908442253</span>
+              </a>
 
-  <div>
-    {showPopup && (
-      <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
-        <div className="bg-white p-6 rounded-md shadow-md">
-          <p className="text-xl font-semibold text-gray-800">Thank you for contacting us...</p>
+              <a href="mailto:rainbowschool0236@gmail.com" className="flex items-center p-2 text-blue-900 rounded-full md:ml-4 mt-2 md:mt-0">
+                <AiOutlineMail size={24} />
+                <span className="ml-2">Rainbowschool0236@gmail.com</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    )}
-    {emailSubmitted ? (
-      <p className="text-green-500 text-sm mt-2">Email sent successfully!</p>
-    ) : (
-      <form className="flex flex-col max-w-md mx-auto md:ml-auto" onSubmit={handleSubmit}>
-        <div className="mb-6">
-          <label htmlFor="email" className="text-blue-900 block mb-2 text-sm font-medium">
-            Email
-          </label>
-          <input
-            name="email"
-            type="email"
-            id="email"
-            required
-            className="bg-[#3e404c] border border-[#33353F] rounded-sm placeholder-[#9CA2A9] text-gray-100 text-sm block w-full p-2.5"
-            placeholder="jacob@google.com"
-          />
+
+        <div>
+          {showPopup && (
+            <div className="fixed inset-0 flex  bg-gray-800 bg-opacity-75">
+              <div className="bg-white p-6 rounded-md shadow-md">
+                <p className="text-xl font-semibold text-gray-800">Thank you for contacting us...</p>
+              </div>
+            </div>
+          )}
+          {emailSubmitted ? (
+            <p className="text-green-500 text-sm mt-2">Email sent successfully!</p>
+          ) : (
+            <form onSubmit={handleSubmit}>
+                <div className="mb-6">
+                <label htmlFor="subject" className="text-blue-900 block text-sm mb-2 mr-64 lg:mr-[500px]  font-medium">
+                  Name
+                </label>
+                <input
+                  name="subject"
+                  type="text"
+                  id="subject"
+                  required
+                  className="bg-[#3e404c] border border-[#33353F] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="email" className="text-blue-900 block mb-2 text-sm  mr-64 lg:mr-[500px]   font-medium">
+                  Email
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+                  className="bg-[#3e404c] border border-[#33353F] rounded-sm text-gray-100 text-sm block w-full p-2.5"
+                />
+              </div>
+            
+              <div className="mb-6">
+                <label htmlFor="message" className="text-blue-900 block text-sm mb-2 mr-64  lg:mr-[500px]  font-medium">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  className="bg-[#3e404c] border border-[#33353F] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-slate-900 hover:bg-primary-600 text-white font-semibold py-2.5 px-5 rounded-lg w-full"
+              >
+                Submit
+              </button>
+            </form>
+          )}
         </div>
-        <div className="mb-6">
-          <label htmlFor="subject" className="text-blue-900 block text-sm mb-2 font-medium">
-            Name
-          </label>
-          <input
-            name="subject"
-            type="text"
-            id="subject"
-            required
-            className="bg-[#3e404c] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-            placeholder="Just saying hi"
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="text-blue-900 block text-sm mb-2 font-medium">
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            className="bg-[#3e404c] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-            placeholder="Let's talk about..."
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-slate-900 hover:bg-primary-600 text-white font-semibold py-2.5 px-5 rounded-lg w-full"
-        >
-          Send
-        </button>
-      </form>
-    )}
-  </div>
-</section>
+      </section>
 
       <section className="grid md:grid-cols-1 md:gap-4">
         <div className="mb-4 md:mb-0">
@@ -141,4 +142,5 @@ const EmailSection = () => {
 };
 
 export default EmailSection;
+
 

@@ -13,16 +13,16 @@ const Gallery = () => {
         { id: 6, imgSrc: '/image4.jpg' },
         { id: 7, imgSrc: '/kids.jpg' },
         { id: 8, imgSrc: '/image5.jpg' },
-        { id: 9, imgSrc: '/image13.jpg' },
+        { id: 9, imgSrc: '/imgsli4.jpg' },
         { id: 10, imgSrc: '/classroom.jpg' },
         { id: 11, imgSrc: '/image6.jpg' },
-        { id: 12, imgSrc: '/image7.jpg' },
+        { id: 12, imgSrc: '/games.jpg' },
         { id: 13, imgSrc: '/transpaort.jpg' },
-        { id: 14, imgSrc: '/image8.jpg' },
+        { id: 14, imgSrc: '/image2.jpg' },
         { id: 15, imgSrc: '/digital.jpg' },
-        { id: 16, imgSrc: '/image13.jpg' },
-        { id: 17, imgSrc: '/image1.jpg' },
-        { id: 18, imgSrc: '/games.jpg' },
+        { id: 16, imgSrc: '/festi.jpg' },
+        { id: 17, imgSrc: '/slider5.jpeg' },
+        { id: 18, imgSrc: '/image14.jpg' },
         // Add more images as needed
     ];
     const [model, setModel] = useState(false);
@@ -39,7 +39,7 @@ const Gallery = () => {
 
     return (
         <>
-            <h1 className="text-3xl font-bold mb-8 mt-14 text-blue-900 blink" id="Gallery">Our Gallery</h1>
+            <h1 className="text-4xl font-bold mb-8 mt-14 text-blue-900 blink" id="Gallery">Our Gallery</h1>
             {model && (
                 <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-50" onClick={closeModal}></div>
             )}

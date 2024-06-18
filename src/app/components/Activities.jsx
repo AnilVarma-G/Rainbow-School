@@ -47,7 +47,7 @@ const ActivitiesComponent = () => {
         },
         {
             header: "Cultural Activities",
-            imageSrc: "/slider6.jpeg", // Replace with actual image path
+            imageSrc: "/activities.jpg", // Replace with actual image path
             content: "Cultural activities celebrate diversity and heritage. Through festivals, traditions, and arts, students learn about different cultures, fostering mutual respect and understanding."
         },
         {
@@ -57,7 +57,7 @@ const ActivitiesComponent = () => {
         },
         {
             header: "Festival-wise Activities",
-            imageSrc: "/games.jpg", // Replace with actual image path
+            imageSrc: "/festi.jpg", // Replace with actual image path
             content: "Festival-wise activities enrich cultural learning and celebrate festive occasions. Students participate in rituals, crafts, and performances, promoting cultural awareness and unity."
         },
         {
@@ -70,7 +70,7 @@ const ActivitiesComponent = () => {
 
     return (
         <div className="p-4 mt-14" id='Activities'>
-            <h1 className="text-3xl font-bold mb-4 text-blue-900 blink"> Our Activities </h1>
+            <h1 className="text-4xl font-bold mb-4 text-blue-900 blink"> Our Activities </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {activities.map((activity, index) => (
                     <div

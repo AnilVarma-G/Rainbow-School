@@ -2,9 +2,9 @@ import React from 'react';
 
 const Welcome = () => {
   return (
-    <div className="flex items-center justify-center  ">
+    <div className="flex   items-center justify-center  ">
       <div className="text-center p-3  shadow-lg rounded-lg">
-        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-blue-500 blink">
+        <h1 className="text-4xl mt-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-blue-500 blink">
           WELCOME
         </h1>
         <p className="mt-4 text-lg text-black text-justify">
