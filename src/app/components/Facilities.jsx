@@ -37,7 +37,7 @@ const Facilities = () => {
 
     return (
         <div className="p-4 mt-14" id='Facilities'>
-            <h1 className="text-3xl font-bold mb-8 text-blue-900 blink">Our Facilities</h1>
+            <h1 className="text-4xl font-bold mb-8 text-blue-900 blink">Our Facilities</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-sm">
                 {items.map((item, index) => (
                     <div key={index} className="bg-sky-50 rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 facilities">
