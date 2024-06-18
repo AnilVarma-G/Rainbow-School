@@ -31,7 +31,7 @@ const navLinks = [
     path: "#Contactus",
   },
   {
-    title: "Webelieve",
+    title: "We believe",
     path: "#Webelieve",
   },
 ];
@@ -44,6 +44,7 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link href="/" className="flex items-center text-2xl md:text-5xl text-white font-semibold">
           {/* <img src="/rainbowlogo.jpg" alt="Rainbow School Logo" width={100} height={30} /> */}
+          
           <span className="rainbow-text ml-2">Rainbow School</span>
         </Link>
         <div className="mobile-menu block md:hidden">
